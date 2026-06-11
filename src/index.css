@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-gradient-1: rgba(186, 218, 252, 0.4);
+  --bg-gradient-2: rgba(224, 238, 255, 0.6);
+  --app-bg: #e5f0fa; /* Beautiful light blue base background */
+  
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --card-border: rgba(148, 163, 184, 0.18);
+  
+  --text-main: #0f172a; /* Slate 900 */
+  --text-muted: #475569; /* Slate 600 */
+  
+  --nav-bg: rgba(255, 255, 255, 0.75);
+  --nav-border: rgba(148, 163, 184, 0.12);
+  
+  --btn-gold-bg: #0f172a;
+  --btn-gold-text: #ffffff;
+  --btn-gold-hover: #1e293b;
+  
+  --btn-outline-border: rgba(148, 163, 184, 0.35);
+  --btn-outline-hover: rgba(148, 163, 184, 0.08);
+  --btn-outline-text: #0f172a;
+
+  --input-bg: #f8fafc;
+  --input-border: rgba(148, 163, 184, 0.25);
+  --input-text: #0f172a;
+}
+
+@layer components {
+  .glass-card {
+    background-color: var(--card-bg) !important;
+    border: 1px solid var(--card-border) !important;
+    border-radius: 1.5rem !important; /* rounded-3xl */
+    padding: 1.5rem !important; /* p-6 */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+  
+  .gold-gradient-text {
+    background: linear-gradient(to right, var(--text-main), var(--text-muted)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+  
+  .btn-gold {
+    background-color: var(--btn-gold-bg) !important;
+    color: var(--btn-gold-text) !important;
+  }
+  
+  .btn-gold:hover:not(:disabled) {
+    background-color: var(--btn-gold-hover) !important;
+  }
+  
+  .btn-outline {
+    border: 1px solid var(--btn-outline-border) !important;
+    background-color: transparent !important;
+    color: var(--btn-outline-text) !important;
+  }
+  
+  .btn-outline:hover:not(:disabled) {
+    background-color: var(--btn-outline-hover) !important;
+  }
+}
+
+body {
+  background-color: var(--app-bg) !important;
+  color: var(--text-main) !important;
+  font-family: 'DM Sans', sans-serif !important;
+  antialiased: true;
+  overflow-x: hidden;
+  min-h-screen: true;
+  background-image: 
+    radial-gradient(at 0% 0%, var(--bg-gradient-1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, var(--bg-gradient-2) 0px, transparent 50%) !important;
+  background-attachment: fixed !important;
+  transition: background-color 0.3s ease, background-image 0.3s ease, color 0.3s ease !important;
+}
