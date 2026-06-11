@@ -37,6 +37,11 @@ export async function connectDB(): Promise<typeof mongoose> {
   }
 
   if (!cache.promise) {
+    // Prevent unhandled connection error crashes on Vercel
+    mongoose.connection.on('error', (err) => {
+      console.error('Mongoose connection error:', err)
+    })
+
     cache.promise = mongoose.connect(MONGODB_URI, {
       bufferCommands: false,
       maxPoolSize: 10,
