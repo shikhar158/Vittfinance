@@ -97,27 +97,3 @@ Vitt/
 *   **Role:** Exports a professional investment statement PDF.
 *   **Workflow:** Uses `jsPDF` canvas rendering. Draws structured summary cards, allocation data sheets, colored distribution progress indicators, and custom disclaimers. Avoids encoding issues by standardizing on `Rs.` currency symbols.
 
----
-
-## 🚀 Getting Started
-
-### 1. Installation
-Clone the repository and install all dependencies:
-```bash
-npm install
-```
-
-### 2. Environment Setup
-Create a `.env.local` file in the root directory:
-```env
-MONGODB_URI=your_mongodb_atlas_connection_string
-JWT_SECRET=your_jwt_signing_secret
-GNEWS_KEY=your_gnews_api_key
-```
-
-### 3. Run Locally
-Start the development server:
-```bash
-npm run dev
-```
-Open [http://localhost:5173](http://localhost:5173) in your browser.
