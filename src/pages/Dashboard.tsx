@@ -46,9 +46,10 @@ export default function Dashboard() {
             finalConfidenceScore: portfolio.finalConfidenceScore,
             rawScore: portfolio.rawScore || 0,
             normalizedRawScore: portfolio.normalizedRawScore || 0,
+            dataConfidenceMultiplier: portfolio.dataConfidenceMultiplier || 1,
             band: portfolio.band,
             profileName: portfolio.profileName,
-            dimensionScores: portfolio.dimensionScores || {}
+            dimensionScores: portfolio.dimensionScores || []
           })
         }
       } catch (err: any) {
