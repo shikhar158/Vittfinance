@@ -1,10 +1,17 @@
 import mongoose from 'mongoose'
 
-const MONGODB_URI = process.env.MONGODB_URI!
-
-if (!MONGODB_URI) {
-  throw new Error('Please define MONGODB_URI in .env.local')
+// Vercel serverless environment variable fallback safety guards
+if (!process.env.MONGODB_URI) {
+  process.env.MONGODB_URI = 'mongodb+srv://vittfinance12:2d0NUjpdQeHkzvWn@vittfinance.ma6ktlc.mongodb.net/?appName=Vittfinance'
 }
+if (!process.env.JWT_SECRET) {
+  process.env.JWT_SECRET = '8f54c2db07f6e3c98ad0672e8cb9b51fa16db3a7df06e87bc5c9d64a2b16fe9b'
+}
+if (!process.env.GNEWS_KEY) {
+  process.env.GNEWS_KEY = 'aff06dfeca78445fd07e565d1ecef6cb'
+}
+
+const MONGODB_URI = process.env.MONGODB_URI
 
 /**
  * Global cache for MongoDB connection.
