@@ -11,6 +11,8 @@ node_modules
 dist
 build
 dist-ssr
+.env
+.env.*
 *.local
 
 # Editor directories and files

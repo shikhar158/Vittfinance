@@ -1,5 +1,7 @@
 # 🪙 VITT — Adaptive Personal Finance & Asset Allocation Engine
 
+**Live Application:** [https://vittfinance.vercel.app](https://vittfinance.vercel.app)
+
 Vitt is an intelligent, premium personal finance advisor and asset allocation system tailored specifically for Indian demography and regional segments (Urban, Semi-Urban, and Rural). 
 
 By analyzing user lifestyle contexts, financial inputs, and localized variables, Vitt dynamically calculates a financial **Confidence Score**, determines a **Risk Band (1–10)**, generates **Tailored Asset Allocations**, and outputs branded, high-fidelity **PDF Reports** for complete investment planning.
